@@ -1,0 +1,43 @@
+{
+  "name": "local-task-tracker",
+  "version": "1.0.0",
+  "description": "Локальный проект трекинга задач по проектам для отслеживания личного прогресса (проект создан для личного использования, можно использовать для себя).",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pashabbrv/local-task-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "build": {
+    "appId": "local.task.tracker",
+    "productName": "Local Task Tracker",
+    "directories": {
+      "buildResources": "build"
+    },
+    "files": [
+      "!node_modules/.cache"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/pashabbrv/local-task-tracker/issues"
+  },
+  "homepage": "https://github.com/pashabbrv/local-task-tracker#readme"
+}

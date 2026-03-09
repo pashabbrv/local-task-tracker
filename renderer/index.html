@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Local Task Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <h1>Local Task Tracker</h1>
+        <span class="app-subtitle">Личные задачи по проектам, только на твоём компьютере</span>
+      </header>
+
+      <main class="app-main">
+        <section class="sidebar">
+          <div class="sidebar-header">
+            <h2>Проекты</h2>
+          </div>
+          <div id="project-list" class="project-list"></div>
+          <form id="project-form" class="sidebar-form">
+            <input
+              id="project-name-input"
+              type="text"
+              placeholder="Название проекта"
+              autocomplete="off"
+            />
+            <button type="submit">Добавить проект</button>
+          </form>
+        </section>
+
+        <section class="board">
+          <div id="empty-state" class="empty-state">
+            <p>Создай первый проект, чтобы добавить задачи.</p>
+          </div>
+
+          <div id="board-content" class="board-content hidden">
+            <header class="board-header">
+              <h2 id="current-project-name"></h2>
+            </header>
+
+            <ul id="task-list" class="task-list"></ul>
+
+            <form id="task-form" class="task-form">
+              <input
+                id="task-text-input"
+                type="text"
+                placeholder="Новая задача по проекту"
+                autocomplete="off"
+              />
+              <button type="submit">Добавить задачу</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>
+
